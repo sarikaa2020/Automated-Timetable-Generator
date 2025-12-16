@@ -1,0 +1,3 @@
+teacher_id,teacher_name,qualified_courses,available_timeslots,preferred_timeslots
+T1,Asha,"C101;C102","Mon_09;Mon_10;Mon_11;Tue_09;Tue_10","Mon_09"
+T2,Raj,"C201","Tue_09;Tue_10;Wed_09;Wed_10","Tue_10"

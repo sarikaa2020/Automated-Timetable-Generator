@@ -1,0 +1,4 @@
+course_id,course_name,lectures_per_week,preferred_duration_minutes,group_id,expected_size
+C101,Data Structures,3,60,G1,60
+C102,Algorithms,3,60,G1,50
+C201,Operating Systems,2,60,G2,40
