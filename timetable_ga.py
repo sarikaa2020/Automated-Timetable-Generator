@@ -15,19 +15,19 @@ from collections import defaultdict, Counter
 import argparse
 import sys
 
-# ---------- Parameters (tune as needed) ----------
+
 POP_SIZE = 100
 GENERATIONS = 800
 TOURNAMENT_K = 3
 MUTATION_RATE = 0.2
 ELITE = 4
-HARD_PENALTY = 10**6   # very large to force feasibility
-SOFT_PENALTY = 5       # smaller for preferences/gaps
+HARD_PENALTY = 10**6   
+SOFT_PENALTY = 5       
 RANDOM_SEED = 42
 
 random.seed(RANDOM_SEED)
 
-# ---------- Utilities: load data ----------
+
 def load_data(data_dir="data"):
     courses = pd.read_csv(f"{data_dir}/courses.csv", dtype=str).fillna("")
     teachers = pd.read_csv(f"{data_dir}/teachers.csv", dtype=str).fillna("")
