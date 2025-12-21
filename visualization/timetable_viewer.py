@@ -7,9 +7,6 @@ df = pd.read_csv("../data/generated_timetable.csv")
 # Split day and time
 df[['day', 'time']] = df['timeslot'].str.split('_', expand=True)
 
-# Create output directory
-os.makedirs(".", exist_ok=True)
-
 def generate_html(filtered_df, title, filename):
     days = sorted(filtered_df['day'].unique())
     times = sorted(filtered_df['time'].unique())
@@ -62,10 +59,15 @@ def generate_html(filtered_df, title, filename):
 
     print(f"✅ Generated {filename}")
 
-# 1️⃣ Global timetable
+# 🌍 Global timetable
 generate_html(df, "Automated Timetable Generator", "timetable.html")
 
-# 2️⃣ Group-wise timetables
+# 🧑‍🎓 Group-wise timetables
 for group in df['group'].unique():
     group_df = df[df['group'] == group]
     generate_html(group_df, f"Timetable for Group {group}", f"group_{group}.html")
+
+# 🧑‍🏫 Teacher-wise timetables
+for teacher in df['teacher'].unique():
+    teacher_df = df[df['teacher'] == teacher]
+    generate_html(teacher_df, f"Timetable for Teacher {teacher}", f"teacher_{teacher}.html")
