@@ -49,7 +49,10 @@ Future Enhancements:
 
 - Database integration for large-scale deployment
 
-Author-Sarika
+
+Author:
+
+Sarika
 GitHub: https://github.com/sarikaa2020
 
 This project demonstrates strong proficiency in algorithm design, optimization techniques, and Python-based system development.
